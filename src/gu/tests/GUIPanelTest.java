@@ -1,15 +1,15 @@
 /**
  * 
  */
-package gui.tests;
+package gu.tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import gui.controller.GUIAppController;
-import gui.view.GUIPanel;
+import gui.controller.GuiAppController2;
+import gui.view.GuiPanel2;
 
 
 /**
@@ -20,16 +20,16 @@ import gui.view.GUIPanel;
 public class GUIPanelTest
 {
 
-	private GUIPanel testPanel;
-	private GUIAppController testController;
+	private GuiPanel2 testPanel;
+	private GuiAppController2 testController;
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@Before
 	public void setUp() throws Exception
 	{
-		testController = new GUIAppController();
-		testPanel = new GUIPanel(testController);
+		testController = new GuiAppController2();
+		testPanel = new GuiPanel2(testController);
 	}
 
 	/**

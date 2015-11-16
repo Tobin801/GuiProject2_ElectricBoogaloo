@@ -23,4 +23,9 @@ public class GuiFrame2 extends JFrame
 		this.setSize(1200, 750);
 		this.setVisible(true);
 	}
+	
+	public GuiAppController2 getBaseController()
+	{
+		return baseController;
+	}
 }
