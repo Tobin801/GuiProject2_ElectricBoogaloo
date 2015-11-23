@@ -1,11 +1,10 @@
 package gui.view;
 
 import javax.swing.*;
-
+import java.awt.event.*;
 import gui.controller.GuiAppController2;
+import java.awt.Color;
 
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class GuiPanel2 extends JPanel
 {
@@ -49,5 +48,72 @@ public class GuiPanel2 extends JPanel
 				firstTextField.setText("Don't click it");
 			}
 		});
+		
+		this.addMouseListener(new MouseListener()
+		{
+			public void mouseClicked(MouseEvent clicked)
+			{
+//				changeRandomColor();
+				if(SwingUtilities.isLeftMouseButton(clicked))
+				{
+					firstTextField.setText("you left clicked");
+				}
+				else if(SwingUtilities.isRightMouseButton(clicked))
+				{
+					firstTextField.setText("you right clicked");
+				}
+			}
+			
+			public void mouseReleased(MouseEvent released)
+			{
+				changeRandomColor();
+			}
+			
+			public void mousePressed(MouseEvent pressed)
+			{
+				
+			}
+			
+			public void mouseEntered(MouseEvent entered)
+			{
+//				changeRandomColor();
+			}
+			
+			public void mouseExited(MouseEvent exited)
+			{
+//				changeRandomColor();
+			}
+		});
+		
+		this.addMouseMotionListener(new MouseMotionListener()
+		{
+			public void mouseMoved(MouseEvent moved)
+			{
+				firstButton.setText("Mouse X: " + moved.getX() + " Mouse Y: " + moved.getY());
+				if((moved.getX() > 25 && moved.getX() < 40) && (moved.getY() > 50 && moved.getY() < 70))
+				{
+					changeRandomColor();
+				}
+			}
+			
+			public void mouseDragged(MouseEvent dragged)
+			{
+				if(dragged.isAltDown())
+				{
+					firstTextField.setText("you held alt and dragged!");
+				}
+			}
+		});
+	}
+	
+	private void changeRandomColor()
+	{
+		int red, green, blue;
+		
+		red = (int) (Math.random() * 256);
+		green = (int) (Math.random() * 256);
+		blue = (int) (Math.random() * 256);
+		
+		this.setBackground(new Color(red, green, blue));
 	}
 }
