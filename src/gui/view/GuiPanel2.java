@@ -53,12 +53,12 @@ public class GuiPanel2 extends JPanel
 		{
 			public void mouseClicked(MouseEvent clicked)
 			{
-				
+//				changeRandomColor();
 			}
 			
 			public void mouseReleased(MouseEvent released)
 			{
-				
+				changeRandomColor();
 			}
 			
 			public void mousePressed(MouseEvent pressed)
@@ -68,12 +68,12 @@ public class GuiPanel2 extends JPanel
 			
 			public void mouseEntered(MouseEvent entered)
 			{
-				
+//				changeRandomColor();
 			}
 			
 			public void mouseExited(MouseEvent exited)
 			{
-				
+//				changeRandomColor();
 			}
 		});
 	}
