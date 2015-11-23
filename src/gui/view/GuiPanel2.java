@@ -76,6 +76,19 @@ public class GuiPanel2 extends JPanel
 //				changeRandomColor();
 			}
 		});
+		
+		this.addMouseMotionListener(new MouseMotionListener()
+		{
+			public void mouseMoved(MouseEvent moved)
+			{
+				changeRandomColor();
+			}
+			
+			public void mouseDragged(MouseEvent dragged)
+			{
+				
+			}
+		});
 	}
 	
 	private void changeRandomColor()
